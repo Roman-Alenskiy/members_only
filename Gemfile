@@ -10,6 +10,12 @@ end
 gem 'rails', '~> 5.1.6'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
+# Use bootstrap and sass for front-end
+gem 'bootstrap', '~> 4.1.1'
+# jQuery for bootstrap
+gem 'jquery-rails', '~> 4.3.3'
+# Sprockets implementation for rails
+gem 'sprockets-rails', '~> 3.2.1'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets

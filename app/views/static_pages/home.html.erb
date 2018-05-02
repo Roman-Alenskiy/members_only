@@ -1,8 +1,4 @@
-<h1>Welcome to Members-only lodge!</h1>
-<%= link_to "Sign up", signup_path %>
-<%= link_to "View posts", posts_path %>
-
-
+<h1>Welcome to members-only Lodge!</h1>
 <% if logged_in?%>
     <%= link_to "Log out", logout_path, method: :delete %>
     <%= current_user.name %>
@@ -10,4 +6,3 @@
 <% else %>
     <%= link_to "Log in", login_path %>
 <% end %>
-    

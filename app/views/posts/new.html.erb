@@ -1,6 +1,6 @@
-<%= render 'shared/post_error_messages' %>
-
 <%= form_for @post do |f| %>
+
+    <%= render 'shared/post_error_messages' %>
 
     <%= f.label :header, "Header:" %>
     <%= f.text_field :header %>
