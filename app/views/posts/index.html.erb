@@ -1,0 +1,12 @@
+<h1>Posts</h1>
+
+<% @posts.each do |post| %>
+    <h2><%= post.header %></h2>
+    <% if logged_in? %>
+        <h3>by <%= post.user.name%> </h3>
+    <% else %>
+        <h3>by (secret)</h3>
+    <% end %>
+    <p><%= post.content %> </p>
+
+<% end %>

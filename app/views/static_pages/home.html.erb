@@ -1,11 +1,12 @@
 <h1>Welcome to Members-only lodge!</h1>
 <%= link_to "Sign up", signup_path %>
-<%= link_to "View posts", '#' %>
+<%= link_to "View posts", posts_path %>
 
 
 <% if logged_in?%>
     <%= link_to "Log out", logout_path, method: :delete %>
     <%= current_user.name %>
+    <%= link_to "Write post", new_post_path %>
 <% else %>
     <%= link_to "Log in", login_path %>
 <% end %>

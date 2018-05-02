@@ -1,6 +1,9 @@
 class User < ApplicationRecord
     attr_accessor :remember_token
 
+    # References
+    has_many :posts
+
     # Filters
     before_save :downcase_email
 
