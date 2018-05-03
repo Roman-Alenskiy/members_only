@@ -39,6 +39,39 @@ form {
     }
 }
 
+/* Footer */
+.github-logo {
+    width: 32px;
+}
+
+#github-logo-light {
+    .github {
+        fill: rgba(255, 255, 255, 0.75);
+    }
+}
+
+#github-logo-light:hover {
+    .github {
+        fill: #fff;
+    }
+}
+
+#github-logo-dark {
+    .github {
+        fill: rgba(0, 0, 0, 0.75);
+    }
+}
+
+#github-logo-dark:hover {
+    .github {
+        fill: #000;
+    }
+}
+
+.nav {
+    padding-bottom: 8px;
+}
+
 /* Typography */
 h1,
 h2,

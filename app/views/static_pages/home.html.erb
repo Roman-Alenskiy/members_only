@@ -1,8 +1,10 @@
-<h1>Welcome to members-only Lodge!</h1>
-<% if logged_in?%>
-    <%= link_to "Log out", logout_path, method: :delete %>
-    <%= current_user.name %>
-    <%= link_to "Write post", new_post_path %>
-<% else %>
-    <%= link_to "Log in", login_path %>
-<% end %>
+<h1>Welcome to Secret Lodge!</h1>
+<div class="center">
+  <p class="lead"> This is an exclusive clubhouse of student group "Applied Informatics 1601" 
+  in the Saint-P. University of Economics, where members can write embarrassing posts about non-members. Inside the clubhouse, 
+  members can see who the author of a post is but, outside, they can only see the story and wonder who wrote it.</p>
+  <p class="lead">
+    <%= link_to "Sign up", signup_path, class: 'btn btn-secondary btn-lg' %>
+    <%= link_to "View posts", posts_path, class: 'btn btn-secondary btn-lg' %>
+  </p>
+</div>
