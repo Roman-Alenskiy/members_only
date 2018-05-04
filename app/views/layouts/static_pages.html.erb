@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html id="home-html">
+<html>
   <head>
     <title>MembersOnly</title>
     <%= csrf_meta_tags %>
@@ -8,22 +8,21 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class="home">
+  <body class="text-center">
 
-    <%= render 'layouts/header_static' %>
 
-    <main>
-      <div class="container">
-        
+      <div class="home-container d-flex h-100 p-3 mx-auto flex-column">
+        <%= render 'layouts/header_static' %>
+
         <% flash.each do |message_type, message| %>
           <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
         <% end %>
   
         <%= yield %>
-      </div>
-    </main>
 
-    <%= render 'layouts/footer_static' %>
+        <%= render 'layouts/footer_static' %>
+      </div>
+
 
   </body>
 </html>
