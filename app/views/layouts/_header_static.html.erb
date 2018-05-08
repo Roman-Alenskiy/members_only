@@ -6,7 +6,7 @@
                 <%= link_to "Salute, " + current_user.name + "!", "#", class: 'nav-link' %>
                 <%= link_to "Log out", logout_path, method: :delete, class: 'nav-link active' %>
             <% else %>
-                <%= link_to "Log in", login_path, class: 'nav-link active' %>
+                <%= link_to "Log in", login_path, method: :get, class: 'nav-link active' %>
             <% end %>
         </nav>
     </div>
