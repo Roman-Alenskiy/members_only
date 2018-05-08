@@ -1,26 +1,44 @@
 <!DOCTYPE html>
-<html class="app">
+<html>
   <head>
     <title>MembersOnly</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "custom", 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class="text-center">
-    <div class="form-container d-flex h-100 pb-3 mx-auto flex-column">
-      <%= render 'layouts/header' %>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <%= render 'layouts/header' %>
+        </div>
+      </div>
 
-      <% flash.each do |message_type, message| %>
-        <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
-      <% end %>
+      <div class="row row-flash">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <% flash.each do |message_type, message| %>
+            <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+          <% end %>
+        </div>
+      </div>
 
-      <%= yield %>
+      <div class="row">
+        <div class="col-0 col-sm-1 col-md-3"></div>
+        <div class="col-12 col-sm-10 col-md-6">
+          <%= yield %>
+        </div>
+      </div>
 
-      <%= render 'layouts/footer' %>
 
     </div>
+    <div class="footer">
+      <%= render 'layouts/footer' %>
+    </div>
+
 
 
   </body>
