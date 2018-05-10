@@ -19,10 +19,6 @@ body {
     padding-bottom: 16px;
 }
 
-header {
-    min-height: 64px;
-}
-
 main {
     margin-top: 30px;
     background-color: #fff;
@@ -39,8 +35,34 @@ main {
 /*
  * Header
  */
- header {
-    background-color: #333;
-    border-bottom-left-radius: 7px;
-    border-bottom-right-radius: 7px;
+header {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+@media (min-width: 576px) {
+    .navbar {
+        padding: 0.5rem 4rem;
+    }
+
+    .navbar {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    
+    .nav-link {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    .btn-secondary {
+        margin-top: 9px;
+    }
+
+    .dropdown-menu {
+        margin: 0;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    }
 }
