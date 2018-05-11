@@ -50,7 +50,7 @@ class PostsController < ApplicationController
         def correct_user
             post = Post.find(params[:id])
             user = post.user
-            redirect_to(root_url) unless current_user?(user)
+            redirect_to(root_url) unless (current_user?(user) || current_user.admin?)
         end
 
 end
