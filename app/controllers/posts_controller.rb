@@ -23,7 +23,7 @@ class PostsController < ApplicationController
     end
 
     def destroy
-        Post.find(params[:id]).destroy
+        @post.destroy
         flash[:success] = "Post successfully deleted!"
         redirect_to posts_path
     end
@@ -48,8 +48,8 @@ class PostsController < ApplicationController
         
         # Confirms the correct user
         def correct_user
-            post = Post.find(params[:id])
-            user = post.user
+            @post = Post.find(params[:id])
+            user = @post.user
             redirect_to(root_url) unless (current_user?(user) || current_user.admin?)
         end
 
